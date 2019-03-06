@@ -39,9 +39,7 @@ export interface IAuthState {
       cohortName: string,
       trainer: IUser,
       startDate: string,
-      endDate: string,
-      cohortId: number,
-      cohortToken: string
+      endDate: string
     },
     locationDropdownActive: false,
     trainerDropdownActive: false
