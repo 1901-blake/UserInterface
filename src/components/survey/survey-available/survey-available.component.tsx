@@ -1,4 +1,5 @@
 import React from 'react';
+import SurveyInternalComponent from '../survey-internal/survey-internal.component';
 
 export class SurveyAvailableComponent extends React.Component {
     constructor(props) {
@@ -7,12 +8,7 @@ export class SurveyAvailableComponent extends React.Component {
 
     render() {
         return (
-
-            <div className="container create-survey-container" >
-                <div className="jumbotron">
-                    <h2>Survey Available Component</h2>
-                </div>
-            </div>
+            <SurveyInternalComponent />
         );
     }
 }
