@@ -39,7 +39,7 @@ export class SurveyNavComponent extends React.Component<ISurveyNavComponentProps
             <Link to={path + "/assign"}
               className={`nav-link ${this.isActive('staging-manager')}`}
             //   onClick={() => this.props.updateSurveyTable('staging-manager')}
-              >Assign</Link>
+              >Edit/Assign</Link>
           </NavItem>
           <NavItem>
             <Link to={path + "/analytics"}

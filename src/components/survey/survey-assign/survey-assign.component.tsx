@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import { Table } from 'reactstrap';
 import SurveyModal from './survey-assign-modal.component';
+import { Table } from 'reactstrap';
 
 export class SurveyAssignComponent extends React.Component {
     constructor(props) {
@@ -13,27 +13,55 @@ export class SurveyAssignComponent extends React.Component {
                 <Table striped id="manage-users-table" className="tableUsers">
                     <thead className="rev-background-color">
                     <tr>
-                        <th>Surveys To Assign</th>
+                        <th>Select</th>
+                        <th colSpan={5}>Surveys To Assign</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
                         <tr className="rev-table-row">
-                            <td>QC Survey</td>
+                            <td><input type="checkbox"/></td>
+                            <td colSpan={5}>QC Survey</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr className="rev-table-row">
-                            <td>Template 1</td>
+                            <td><input type="checkbox"/></td>
+                            <td colSpan={5}>Template 1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr className="rev-table-row">
-                            <td>Template 2</td>
+                            <td><input type="checkbox"/></td>
+                            <td colSpan={5}>Template 2</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr className="rev-table-row">
+                            <td colSpan={5}><input type="checkbox"/></td>
                             <td>Template 3</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </Table>
 
                 <div className="buttonDiv">
-                    <tr><SurveyModal buttonLabel='Assign To Users' className='assignSurveyBtn'/></tr>
+                    <tr>
+                        <td><SurveyModal buttonLabel='Edit' className='assignSurveyBtn'/></td>
+                        <td><SurveyModal buttonLabel='Assign' className='assignSurveyBtn'/></td>
+                    </tr>
                 </div>
             </Fragment>
         );

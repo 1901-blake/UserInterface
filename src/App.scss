@@ -549,6 +549,23 @@ background-color: $revature-orange-light;
 color:#565D61;
 }
 
+.editAssignBtn{
+    border-color: $revature-orange-light;
+    color: black;
+    border-radius: 10px;
+    background-color: $revature-orange-light;
+    font-weight: bold;
+    height: 40px;
+    width: 100%;
+  }
+  
+  .editAssignBtn:hover,
+  .editAssignBtn:active{
+    background-color: $revature-orange-light;
+    border-color: black;
+    color:black;
+  }
+
 /*****************
 Drag and Drop
 *****************/ 
