@@ -2,7 +2,6 @@ import { IAssociateChartState } from ".";
 import { associateChartTypes } from "../actions/assoc-24-chart/assoc24chart.actions";
 
 const initialState : IAssociateChartState = {
-    type: 'doughnut',
     data: {
         datasets: [{
             data: [50, 20],
@@ -25,7 +24,6 @@ const initialState : IAssociateChartState = {
         ],
 
     },
-    chartInfo:[6,4]
 }
 
 export const associateChartReducer = (state = initialState, action : any): IAssociateChartState => {
@@ -33,7 +31,7 @@ export const associateChartReducer = (state = initialState, action : any): IAsso
         case associateChartTypes.GET_INFO:
         return {
             ...state,
-            chartInfo: action.payload.chartInfo,
+            data: action.payload.chartInfo,
         }
         default:
             return state

@@ -2,7 +2,6 @@ import { IManagerChartState } from ".";
 import { managerChartTypes } from "../actions/manager-24-chart/manager24chart.actions";
 
 const initialState : IManagerChartState = {
-    type: 'doughnut',
     data: {
         datasets: [{
             data: [50, 20],
@@ -25,15 +24,15 @@ const initialState : IManagerChartState = {
         ],
 
     },
-    chartInfo:[6,4]
 }
 
 export const managerChartReducer = (state = initialState, action : any): IManagerChartState => {
     switch (action.type) {
         case managerChartTypes.GET_INFO:
+        console.log("Returned Chart Info " + action.payload.chartInfo);
             return {
                 ...state,
-                chartInfo: action.payload.chartInfo,
+                data: action.payload.chartInfo,
             }
         default:
             return state

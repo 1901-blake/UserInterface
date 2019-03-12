@@ -10,7 +10,6 @@ export interface IReportFormState {
 }
 
 export interface IManagerChartState {
-    type: string,
     data: {
         datasets: [{
             data: number[],
@@ -32,11 +31,9 @@ export interface IManagerChartState {
         ],
 
     },
-    chartInfo:[number, number]
 }
 
 export interface IAssociateChartState {
-    type: string,
     data: {
         datasets: [{
             data: number[],
@@ -58,7 +55,6 @@ export interface IAssociateChartState {
         ],
 
     },
-    chartInfo:[number, number]
 }
 
 

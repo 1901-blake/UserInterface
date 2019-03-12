@@ -1,5 +1,5 @@
 import React from 'react'
-import {ReportForm} from "../interview-src/component/report-form/ReportForm.container"
+import {ReportForm} from "../interview-src/component/report-form/ReportFormComponent"
 import { Switch, Route } from 'react-router';
 import InterviewList from '../interview-src/component/InterviewList/InterviewList';
 import { Testing } from '../interview-src/component/testing/Testing.component';
