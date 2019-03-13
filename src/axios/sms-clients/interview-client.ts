@@ -1,5 +1,5 @@
 import { smsClient } from ".";
-import { INewInterviewData } from "../../interview-src/model/INewInterviewData";
+import { INewInterviewData } from "../../model/INewInterviewData";
 
 const interviewContext = '/interview';
 
@@ -31,6 +31,10 @@ export const interviewClient = {
       
     interviewPerAssoc: async (pageNumber:number, PageSize:number) => {
         return await smsClient.get(interviewContext+`/reports/InterviewsPerAssociate/page?pageNumber=${pageNumber}&pageSize=${PageSize}`);
+    },
+      
+    sendFeedback: async (feedback: any) => {
+        return await smsClient.post(interviewContext+`/feedback`, feedback);
     },
 
     fetchManager24: async () => {

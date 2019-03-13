@@ -66,16 +66,6 @@ export class ReportForm extends React.Component<any, any> {
         super(props);
     }
 
-    _getInfoAssociate()
-    {
-        getInfoAssociate()
-    }
-
-    _getInfoManager()
-    {
-        getInfoManager()
-    }
-
     associateC : IAssociateChartProps = 
     {
     data: {
@@ -130,14 +120,13 @@ export class ReportForm extends React.Component<any, any> {
         
     }
 
-    componentDidMount()
+    componentWillMount()
     {
-    this._getInfoAssociate()
-    this._getInfoManager()
+    getInfoAssociate()
+    getInfoManager()
     //we need to get the correct chart data and pass it down to our components
-    //this.associateC = this.props.associatesChart;
-    //this.managerC = this.props.managersChart;
-    console.log([this]);
+    this.associateC = this.props.associatesChart;
+    this.managerC = this.props.managersChart;
     }
  
     render() { 

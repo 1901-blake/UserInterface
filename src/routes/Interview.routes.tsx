@@ -1,9 +1,10 @@
 import React from 'react'
 import {ReportForm} from "../interview-src/component/report-form/ReportFormComponent"
 import { Switch, Route } from 'react-router';
-import InterviewList from '../interview-src/component/InterviewList/InterviewList';
-import { Testing } from '../interview-src/component/testing/Testing.component';
-import createInterviewComponent from '../interview-src/component/creaInterviewComponent/createInterview.component';
+import InterviewList from '../components/InterviewList/InterviewList';
+import { Testing } from '../components/testing/Testing.component';
+import createInterviewComponent from '../components/creaInterviewComponent/createInterview.component';
+import interviewFeedbackComponent from '../components/interviewFeedbackComponent/interviewFeedback.component';
 
 
 export class InterviewRoutes extends React.Component<any, any> {
@@ -22,6 +23,7 @@ export class InterviewRoutes extends React.Component<any, any> {
                 {/* This is for Ben, please don't delete */}
                 <Route path={`${path}/testing`} component={Testing} />
                 <Route path={`${path}/new`} component={createInterviewComponent} />
+                <Route path={`${path}/:interviewId/feedback`} component={ interviewFeedbackComponent} />
              </Switch>
         )
     }
