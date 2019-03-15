@@ -5,7 +5,7 @@ import { IAssociateInput } from '../../model/Associateinput.model';
 import * as actions from '../../actions/assoc-input/assoc-input.action';
 import { connect } from 'react-redux';
 import { getFormatNames } from './temp.util';
-import { IState } from '../../reducers';
+import { IInterviewState } from '../../reducers/interview';
 //import './radio.style.css';
 
 
@@ -125,9 +125,9 @@ export class AssociateInput extends Component<IProps, IInputState> {
     }
 }
 
-const mapStateToProps = (state: IState) => {
+const mapStateToProps = (state: IInterviewState) => {
     return {
-    //    fields: state.interviewState.associateInput
+       fields: state.associateInput
     };
 };
 

@@ -1,5 +1,6 @@
 import { INewInterviewData } from "../../model/INewInterviewData";
 import { smsClient } from ".";
+import { IAssociateInput } from "../../model/Associateinput.model";
 
 const interviewContext = '/interview';
 
@@ -43,4 +44,15 @@ export const interviewClient = {
     fetchAssoc24: async () => {
         return await smsClient.get(interviewContext + `/reports/request24/associate`);
     },
+
+    submitAssocInput: async (fields: IAssociateInput) => {
+        const url = interviewContext + `/associateInput`;
+        return await smsClient.post(url, {
+            id: fields.id,
+            descriptionProvided: fields.descriptionProvided,
+            receivedNotifications: fields.dateNotified,
+            interviewFormat: fields.interviewFormat,
+            proposedFormat: fields.proposedFormat
+        });
+    }
 }

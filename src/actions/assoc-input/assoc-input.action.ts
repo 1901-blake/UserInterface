@@ -1,6 +1,7 @@
 // Temp import
 import { IAssociateInput } from '../../model/Associateinput.model';
 import { getFormatById } from '../../components/associate-input/temp.util';
+// import { interviewClient } from '../../axios/sms-clients/interview-client';
 
 export const AssocInputActions = {
     UPDATE_DAY_NOTIFIED: 'UPDATE_DAY_NOTIFIED',
@@ -38,14 +39,16 @@ export const updateProposedFormat = (value: string, id: number) => {
     };
 };
 
-export const submit = (fields: IAssociateInput) => (dispatch) => {
-    // interview id
-    // recieved notification
-    // description provided
-    // interview format
-    // proposed format.
-    dispatch({
-        type: AssocInputActions.SUBMIT,
-        payload: fields
-    });
+export const submit = (fields: IAssociateInput) => async (dispatch) => {
+    // const res = await interviewClient.submitAssocInput(fields);
+    // if(res.status === 200) {
+    //     console.log('Assoc Input Submission: SUCCESS!');
+    //     dispatch({
+    //         type: AssocInputActions.SUBMIT,
+    //         payload: fields
+    //     });
+    // } else {
+    //     console.log('Assoc Input Submission: FAILED!');
+    // }
+    console.log(fields);
 };
