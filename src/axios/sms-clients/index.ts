@@ -10,6 +10,13 @@ export const smsClient = axios.create({
   }
 });
 
+export const mgtClient = axios.create({
+    baseURL: environment.mgtContext,
+    headers: {
+      'Content-Type': 'application/json'
+    }
+});
+
 export const surveyContext = axios.create({
   baseURL: environment.surveyContext,
   headers: {
