@@ -6,16 +6,16 @@ import { IResponse } from "../../model/surveys/response.model";
 import { IJunctionSurveyQuestion } from "../../model/surveys/junction-survey-question.model";
 
 const surveyBaseRoute = '/surveys';
-const questionBaseRoute = '/questions';
-const answerBaseRoute = '/answers';
-const responseBaseRoute = '/responses';
-const questionTypeBaseRoute = '/questiontype';
-const questionJunctionBaseRoute = '/junction_survey_questions';
-const questionAllBaseRoute = '/questions/multi-question';
+const questionBaseRoute = surveyBaseRoute + '/questions';
+const answerBaseRoute = surveyBaseRoute + '/answers';
+const responseBaseRoute = surveyBaseRoute + '/responses';
+const questionTypeBaseRoute = surveyBaseRoute + '/questiontype';
+const questionJunctionBaseRoute = surveyBaseRoute + '/junction_survey_questions';
+const questionAllBaseRoute = surveyBaseRoute + '/questions/multi-question';
 
 
-const historyBaseRoute = '/history';
-const junctionSurveyQuestionsBaseRoute = '/junction_survey_questions';
+const historyBaseRoute = surveyBaseRoute + '/history';
+const junctionSurveyQuestionsBaseRoute = surveyBaseRoute + '/junction_survey_questions';
 
 export const surveyClient = {
 

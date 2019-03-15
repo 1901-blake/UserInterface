@@ -3,7 +3,7 @@ const dev = {
   cognitoClientId: '4mafdnad6u1o1ugokulsmbrl96',
   cognitoUserPoolId: 'us-east-1_6hCFlGZHZ',
   mgtContext: 'http://localhost:8765',
-  surveyContext: 'http://localhost:8092',
+  surveyContext: 'http://localhost:8765',
   smsContext: 'http://localhost:8765'
 };
 
