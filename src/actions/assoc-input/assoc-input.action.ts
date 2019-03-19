@@ -7,7 +7,8 @@ export const AssocInputActions = {
     UPDATE_DESC_PROVIDED: 'UPDATE_DESC_PROVIDED',
     UPDATE_ACTUAL: 'UPDATE_ACTUAL',
     UPDATE_PROPOSED: 'UPDATE_PROPOSED',
-    SUBMIT: 'SUBMIT' 
+    SUBMIT: 'SUBMIT',
+    UPDATE_SELECTED: 'SELECTED'
 };
 export const updateDayNotified = (event: any) => {
     return {
@@ -39,11 +40,8 @@ export const updateProposedFormat = (value: string, id: number) => {
 };
 
 export const submit = (fields: IAssociateInput) => (dispatch) => {
-    // interview id
-    // recieved notification
-    // description provided
-    // interview format
-    // proposed format.
+    
+    
     dispatch({
         type: AssocInputActions.SUBMIT,
         payload: fields

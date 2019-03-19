@@ -93,6 +93,19 @@ class InterviewList extends React.Component<InterviewListProps, InterviewListSta
         }
     }
 
+    getAssociateInput = (entry: any) => {
+        return (
+            <td>
+                <Button>
+                    <Link to={{
+                        pathname: `/interview/${(entry.associateInput ? 'viewAssocInput' : 'associateInput')}`, 
+                        state: { interviewId: entry.id } 
+                    }} >{`${(entry.associateInput ? 'View' : 'Add')} Associate Input`}</Link>
+                </Button>
+            </td>
+        );
+    };
+
     render() { 
         return ( 
             <Jumbotron>
@@ -143,8 +156,9 @@ class InterviewList extends React.Component<InterviewListProps, InterviewListSta
                                 <td>{this.renderDate(entry.notified)}</td>
                                 <td>{this.renderDate(entry.scheduled)}</td>
                                 <td>{this.renderDate(entry.reviewed)}</td>
-                                <td>{entry.associateInput ? "Associate Input filled!" : <Button>
-                                    <Link to={{ pathname: '/interview/associateInput', state: { interviewId: entry.id } }} >Add Associate Input</Link></Button>}</td>
+                                {/* <td>{entry.associateInput ? "Associate Input filled!" : <Button>
+                                    <Link to={{ pathname: '/interview/associateInput', state: { interviewId: entry.id } }} >Add Associate Input</Link></Button>}</td> */}
+                                {this.getAssociateInput(entry)}
                             </tr>)
                         })}
                     </tbody>
