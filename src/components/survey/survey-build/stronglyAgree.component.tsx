@@ -1,17 +1,24 @@
 import React from 'react';
-
+import { Tooltip } from 'reactstrap';
 export class StronglyAgree extends React.Component<any, any> {
   constructor(props) {
     super(props);
-
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      tooltipOpen: false
+    };
   
   }
-
+  toggle() {
+    this.setState({
+      tooltipOpen: !this.state.tooltipOpen
+    });
+  }
   render() {
 
     return (
-
-      <div>
+<div>
+      <div id="stronglyPointer">
         <label htmlFor="" style={{ marginBottom: 0, textAlign: 'center' }} id="agree" className="form-control" > Strongly Agree-Strongly Disagree </label>
 
           <div className="new" id="t3">
@@ -25,7 +32,8 @@ export class StronglyAgree extends React.Component<any, any> {
          <hr/>
 
       </div>
-
+      <Tooltip placement="top" isOpen={this.state.tooltipOpen} target="stronglyPointer" toggle={this.toggle}>Drag and Drop Question</Tooltip>
+</div>
     );
   }
 }

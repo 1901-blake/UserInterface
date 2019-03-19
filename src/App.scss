@@ -655,43 +655,49 @@ float: left;
   letter-spacing: 0.1pc;
   display: inline-block;
   font-size: 14.9px;
- 
+  cursor: pointer;
 }
 #yn{
   background-color: black;
   color: white;
   letter-spacing: 0.1pc;
   font-size: 14.9px;
+  cursor: pointer;
 }
 #agree{
   background-color: black;
   color: white;
   letter-spacing: 0.1pc;
   font-size: 14.9px;
+  cursor: pointer;
 }
 #rating{
   background-color: black;
   color: white;
   letter-spacing: 0.1pc;
   font-size: 14.9px;
+  cursor: pointer;
 }
 #feedback{
   background-color: black;
   color: white;
   letter-spacing: 0.1pc;
   font-size: 14.9px;
+  cursor: pointer;
 }
 #checkbox{
   background-color: black;
   color: white;
   letter-spacing: 0.1pc;
   font-size: 14.9px;
+  cursor: pointer;
 }
 #tf{
   background-color: black;
   color: white;
   letter-spacing: 0.1pc;
   font-size: 14.9px;
+  cursor: pointer;
 }
 // .labelTitle{
 //   font-family: Helvetica;
@@ -912,3 +918,16 @@ Fa Circle
 .faCircle {
     color: $revature-orange-light;
   }
+  #pointer, 
+  #checkPointer, 
+  #feedbackPointer,
+  #multiplePointer,
+  #ratingPointer,
+  #yesnoPointer,
+  #stronglyPointer
+  {
+    cursor: pointer;
+  }
+
+ 
+  
