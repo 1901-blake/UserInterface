@@ -1,19 +1,27 @@
 import React from 'react';
-
+import { Tooltip } from 'reactstrap';
 
 export class FeedBack extends React.Component<any, any> {
   constructor(props) {
     super(props);
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      tooltipOpen: false
+    };
 
   }
-
+  toggle() {
+    this.setState({
+      tooltipOpen: !this.state.tooltipOpen
+    });
+  }
   render() {
 
     return (
-
       <div>
+        <div id="feedbackPointer">
 
-        <label htmlFor="" style={{ marginBottom: 0, textAlign:'center' }} id="feedback" className="form-control" > Feedback </label>
+          <label htmlFor="" style={{ marginBottom: 0, textAlign: 'center' }} id="feedback" className="form-control" > Feedback </label>
 
           <div className="new" id="t5">
 
@@ -21,9 +29,10 @@ export class FeedBack extends React.Component<any, any> {
             </input>
 
           </div>
-          <hr/>
+          <hr />
+        </div>
+        <Tooltip placement="top" isOpen={this.state.tooltipOpen} target="feedbackPointer" toggle={this.toggle}>Drag and Drop Question</Tooltip>
       </div>
-
     );
   }
 }
